@@ -1,19 +1,20 @@
-  class HelloWorld extends React.Component {
+class HelloWorld extends React.Component {
     render() {
         return (
-        <p>
-            Hello, <input type="text" placeholder="Your name here" />!
-            It is {this.props.date.toTimeString()}
-        </p>
+            <p>
+                Hello,
+                <input type="text" placeholder="Your name here"/>! It is {this
+                    .props
+                    .date
+                    .toTimeString()}
+            </p>
         );
     }
-    }
+}
 
-    function tick() {
+function tick() {
     ReactDOM.render(
-        <HelloWorld date={new Date()} />,
-        document.getElementById('example')
-    );
-    }
+        <HelloWorld date={new Date()}/>, document.getElementById('example'));
+}
 
-    setInterval(tick, 500);
+setInterval(tick, 500);
